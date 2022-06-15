@@ -1,0 +1,8 @@
+.table_title{
+    border: none;
+    border-left: 2px solid black;
+}
+
+.table_title:last-child{
+    border: none;
+}
