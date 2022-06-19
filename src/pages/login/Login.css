@@ -6,3 +6,15 @@
     justify-content: center;
     align-items: center;
 }
+.login .fieldset_form{
+    flex-direction: column;
+    padding: 1em;
+}
+
+.login .input{
+    width: 20em;
+}
+
+.login .button{
+    width: 92%;
+}
