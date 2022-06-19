@@ -10,7 +10,7 @@ export default function UserRegister (){
 
     const searchPostalCode = (event) => {
         event.preventDefault();
-        if(event.target.value.length == 8){
+        if(event.target.value.length === 8){
             SetAddress(event.target.parentElement.children);
         }
     }
