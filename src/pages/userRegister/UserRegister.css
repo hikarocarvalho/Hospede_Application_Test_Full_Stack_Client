@@ -6,3 +6,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.user_register .fieldset_form{
+    flex-direction: row;
+}
+
+.user_register .fieldset{
+    flex-direction: column;
+}
+
+.user_register .form{
+    width: auto;
+    height: auto;
+}
+
+.user_register .input{
+    width: 15em;
+}
+
+.user_register .button{
+    margin-top: 0.5em;
+}
