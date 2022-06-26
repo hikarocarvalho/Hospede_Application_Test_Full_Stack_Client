@@ -1,10 +1,12 @@
 import ApiCrud from "../ApiCrud"
 
 const User = {
-    urlUser: 'user',
-    createUser : (data) => ApiCrud('user').create(User.urlUser,data),
-    getUsers : () => ApiCrud('user').getAll(User.urlUser),
-    getUser : (id) => ApiCrud('user').getById(User.urlUser,id),
-    updateUser : (id,data) => ApiCrud('user').update(User.urlUser,data,id),
-    deleteUser : (id) => ApiCrud('user').delete(User.urlUser,id)
+    endPoint: 'user',
+    createUser : (data) => ApiCrud(User.endPoint).create(User.endPoint,data),
+    getUsers : () => ApiCrud(User.endPoint).getAll(User.endPoint),
+    getUser : (id) => ApiCrud(User.endPoint).getById(User.endPoint,id),
+    updateUser : (id,data) => ApiCrud(User.endPoint).update(User.endPoint,data,id),
+    deleteUser : (id) => ApiCrud(User.endPoint).delete(User.endPoint,id)
 }
+
+export default User;

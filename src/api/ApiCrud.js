@@ -14,13 +14,13 @@ const ApiCrud = (entityName)=>({
         })
     ),
     getById: (url,id) => (
-        ApiConfig.withOutAutenticate.get(url+"/"+id)
+        ApiConfig.withAutenticate.get(url+"/"+id)
     ),
     getAll: (url) => (
-        ApiConfig.withOutAutenticate.get(url)
+        ApiConfig.withAutenticate.get(url)
     ),
     update: (url,data,id) => (
-        ApiConfig.withOutAutenticate.patch(url+"/"+id,data)
+        ApiConfig.withAutenticate.patch(url+"/"+id,data)
         .then(response => {
             toast(`Now you have updated the ${entityName}!`);
             return response;
@@ -31,7 +31,7 @@ const ApiCrud = (entityName)=>({
         })
     ),
     delete: (url,id) => (
-        ApiConfig.withOutAutenticate.delete(url+"/"+id)
+        ApiConfig.withAutenticate.delete(url+"/"+id)
         .then(response => {
             toast(`Now you have deleted the ${entityName}!`);
             return response;
