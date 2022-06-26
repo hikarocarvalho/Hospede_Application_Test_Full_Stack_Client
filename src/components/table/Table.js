@@ -2,8 +2,10 @@ import './Table.css';
 
 export default function Table (props){
     return (
-        <table className="table">
-            {props.children}
-        </table>
+        <article className="table_container">
+            <table className="table">
+                {props.children}
+            </table>
+        </article>
     );
 }
