@@ -8,7 +8,8 @@
 }
 
 .user_register .fieldset_form{
-    flex-direction: row;
+    flex-direction: column;
+    
 }
 
 .user_register .fieldset{
@@ -16,6 +17,7 @@
 }
 
 .user_register .form{
+    padding: 1.5em;
     width: auto;
     height: auto;
 }
