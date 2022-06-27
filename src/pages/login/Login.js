@@ -2,7 +2,6 @@ import Form from './../../components/form/Form';
 import Input from './../../components/input/Input';
 import Button from './../../components/button/Button';
 import Auth from '../../api/entities/Auth';
-import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import emailValidate from '../../scripts/validations/emailValidate';

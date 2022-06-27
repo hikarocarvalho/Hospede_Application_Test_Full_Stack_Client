@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Button from '../button/Button';
 import './Modal.css';
 

@@ -7,6 +7,7 @@ import User from '../../api/entities/User';
 import EditUser from '../../components/editUser/EditUser';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../components/modal/Modal';
+import setDateFormat from '../../scripts/validations/setDateFormat';
 
 export default function Home(){
     const [userList, setUserList] = useState();
@@ -103,7 +104,7 @@ export default function Home(){
                         <tr key={user.id} className="table_body_line">
                             <TableLine lineColumnValue={user.userName} />
                             <TableLine lineColumnValue={user.email} />
-                            <TableLine lineColumnValue={user.created_at} />
+                            <TableLine lineColumnValue={setDateFormat(user.created_at)} />
                             <TableLine lineColumnValue={options(user.id)} />
                         </tr>
                     )):null

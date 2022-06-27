@@ -1,6 +1,5 @@
 import { toast } from "react-toastify";
-import ApiConfig from "../ApiConfig"
-import ApiCrud from "../ApiCrud"
+import ApiConfig from "../ApiConfig";
 
 const Auth = {
     endPoint : 'auth',
