@@ -1,16 +1,16 @@
-.table_title{
-    border: none;
-    border-left: 2px solid var(--firstColor);
-    height: fit-content;
-    position:sticky;
-    top: 0;
-    padding: 0.5em;
-    background-color: var(--firstColor);
-    color: var(--fourthColor);
-    font-weight: bold;
-    font-size: 1.2em;
+.table_title {
+  border: none;
+  border-left: 2px solid var(--firstColor);
+  height: fit-content;
+  position: sticky;
+  top: 0;
+  padding: 0.5em;
+  background-color: var(--firstColor);
+  color: var(--fourthColor);
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.table_title:first-child{
-    border: none;
+.table_title:first-child {
+  border: none;
 }

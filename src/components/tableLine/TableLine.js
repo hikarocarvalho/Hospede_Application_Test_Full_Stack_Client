@@ -1,9 +1,5 @@
-import './TableLine.css';
+import "./TableLine.css";
 
-export default function TableLine (props){
-    return (
-        <td className="table_line">
-            {props.lineColumnValue}
-        </td>
-    );
+export default function TableLine(props) {
+  return <td className="table_line">{props.lineColumnValue}</td>;
 }

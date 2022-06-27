@@ -1,9 +1,9 @@
-.table_line{
-    border: none;
-    border-left: 2px solid var(--firstColor);
-    padding: 0.5em;
+.table_line {
+  border: none;
+  border-left: 2px solid var(--firstColor);
+  padding: 0.5em;
 }
 
-.table_line:first-child{
-    border: none;
+.table_line:first-child {
+  border: none;
 }
