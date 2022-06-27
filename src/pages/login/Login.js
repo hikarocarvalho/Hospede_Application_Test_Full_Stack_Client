@@ -1,9 +1,11 @@
 import Form from './../../components/form/Form';
 import Input from './../../components/input/Input';
 import Button from './../../components/button/Button';
-import './Login.css';
 import Auth from '../../api/entities/Auth';
-import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+import emailValidate from '../../scripts/validations/emailValidate';
 
 export default function Login (){
     const navigate = useNavigate();
@@ -15,16 +17,18 @@ export default function Login (){
             password: event.target.inputUserPassword.value,
         }
         Auth.login(preload).then(response => {
+            console.log(response)
             localStorage.setItem('auth',response.data.token);
             navigate('/');
-        })
+        });
     }
     return (
         <section className="login">
             <Form formTitle="User Login" onSubmit={setToken}>
-                <Input id="inputUserEmail" description="user email" />
+                <Input id="inputUserEmail" description="user email" onChange={emailValidate} />
                 <Input id="inputUserPassword" description="user password" />
                 <Button value="Login" />
+                <Link to="/user-register">I need to create an account.</Link>
             </Form>
         </section>
     );

@@ -6,10 +6,12 @@ import './Home.css';
 import User from '../../api/entities/User';
 import EditUser from '../../components/editUser/EditUser';
 import { useNavigate } from 'react-router-dom';
+import Modal from '../../components/modal/Modal';
 
 export default function Home(){
     const [userList, setUserList] = useState();
     const [userEdit, setUserEdit] = useState();
+    const [execute, setExecute] = useState();
 
     const navigate = useNavigate();
 
@@ -31,21 +33,35 @@ export default function Home(){
                 ...userEdit,
                 edit: result.data
             });
-        });
-        
+        });        
     }
 
     const updateUser = (data)=>{
-        User.updateUser(userEdit.edit.id,data).then(()=>{
+        const executeTask = () => User.updateUser(userEdit.edit.id,data).then(()=>{
             setUserEdit(undefined);
             getUserList();
-        })
+        });
+
+        setExecute({
+            ...execute,
+            task: executeTask
+        });
     }
 
     const deleteUser = (id) => {
-        User.deleteUser(id).then(()=>{
+        const executeTask = () => User.deleteUser(id).then(()=>{
             getUserList();
-        })
+        });
+
+        setExecute({
+            ...execute,
+            task: executeTask
+        });
+    }
+
+    const closeModal = (event)=>{
+        event.preventDefault();
+        setExecute(undefined);
     }
 
     const options = (id)=>{
@@ -94,6 +110,9 @@ export default function Home(){
                     }
                 </tbody>
             </Table>
+            {execute?
+                <Modal execute={execute.task} close={closeModal} />
+            :null}
         </section>
     );
 }

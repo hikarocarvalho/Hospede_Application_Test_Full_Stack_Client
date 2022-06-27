@@ -3,6 +3,7 @@ import Input from '../input/Input';
 import Button from '../button/Button';
 import './EditUser.css';
 import { useEffect, useState } from 'react';
+import emailValidate from '../../scripts/validations/emailValidate';
 
 export default function EditUser(props) {
     const [userEdit, setUserEdit] = useState();
@@ -30,7 +31,7 @@ export default function EditUser(props) {
             {userEdit?
                 <Form formTitle="Edit User" onSubmit={saveEditUserValues}>
                     <Input id="inputUserName" description="User Name" value={userEdit.user.userName} />
-                    <Input id="inputEmail" description="Email" value={userEdit.user.email} />
+                    <Input id="inputEmail" description="Email" value={userEdit.user.email} onChange={emailValidate}/>
                     <Input id="inputUserPassword" description="User Password" value={"****"} />
                     <Button value="Edit User" />
                 </Form>

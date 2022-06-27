@@ -10,6 +10,7 @@ export default function Input (props){
                 className="input" 
                 onChange={props.onChange?props.onChange:null} 
                 defaultValue={props.value?props.value:undefined}
+                
             />
         </>
     );
